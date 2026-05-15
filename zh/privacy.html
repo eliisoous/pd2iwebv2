@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title -->
+    <title>隐私政策 | PD2i</title>
+    
+    <meta name="description" content="PD2i隐私政策。我们如何收集、使用和保护您的个人数据。">
+    <meta name="robots" content="noindex, follow">
+    <meta name="author" content="PD2i">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cmp.osano.com https://cdn.tailwindcss.com blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cmp.osano.com; worker-src blob:;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.pd2i.com/zh/privacy.html">
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://www.pd2i.com/privacy.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.pd2i.com/zh/privacy.html">
+    <link rel="alternate" hreflang="fr" href="https://www.pd2i.com/fr/privacy.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.pd2i.com/privacy.html">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../assets/images/logo-pd2i.png" as="image">
+    <link rel="preload" href="../components/header.css" as="style">
+    <link rel="preload" href="../assets/css/style.css" as="style">
+
+    <!-- Favicon Configuration -->
+    <link rel="icon" href="../assets/images/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../assets/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicon/favicon-96x96.png">
+    <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#0083CA">
+    <meta name="theme-color" content="#0083CA">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.pd2i.com/zh/privacy.html">
+    <meta property="og:site_name" content="PD2i">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="隐私政策 | PD2i">
+    <meta property="og:description" content="我们如何收集、使用和保护您的个人数据">
+    
+    <!-- Hide Tailwind CDN Warning -->
+    <script>
+        (function() {
+            const originalWarn = console.warn;
+            console.warn = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production')) {
+                    return;
+                }
+                originalWarn.apply(console, args);
+            };
+        })();
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000',
+                        'pd2i-white': '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="../components/header.css">
+    <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- Page specific styles -->
+    <style>
+        .hero-background {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 50%, #87CEEB 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        .privacy-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .privacy-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .privacy-card:hover::before { transform: scaleX(1); }
+        
+        .privacy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #0083CA;
+        }
+        
+        .privacy-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .privacy-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-left: 4px solid #0083CA;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .info-box.warning {
+            background: linear-gradient(135deg, #fef3cd 0%, #fde68a 100%);
+            border-left-color: #f59e0b;
+        }
+        
+        .info-box.success {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-left-color: #10b981;
+        }
+        
+        .info-box.important {
+            background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+            border-left-color: #ef4444;
+        }
+        
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        
+        .toc {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        
+        .toc a {
+            color: #0083CA;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-btn {
+            background: linear-gradient(135deg, #0083CA 0%, #0066A3 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .privacy-card { padding: 1.5rem; }
+            .privacy-icon { width: 60px; height: 60px; }
+        }
+    </style>
+</head>
+
+<body class="font-roboto bg-gray-50">
+    <!-- Header Component -->
+    <header id="header"></header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-background py-12 text-white flex items-center min-h-[300px]">
+            <div class="container mx-auto px-4">
+                <div class="text-center text-white relative z-10">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 animate-fade-in">隐私政策</h1>
+                    <p class="text-lg md:text-xl mb-6 opacity-90 leading-relaxed max-w-4xl mx-auto animate-fade-in delay-200">
+                        我们如何收集、使用和保护您的个人数据
+                    </p>
+                    <div class="mt-8 animate-fade-in delay-400">
+                        <div class="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                            <p class="text-lg font-medium">
+                                🔒 您的隐私是我们的首要任务
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="py-8 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="toc scroll-animate">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">目录</h2>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <li><a href="#who-we-are">1. 我们是谁</a></li>
+                            <li><a href="#data-collection">2. 我们收集哪些个人数据</a></li>
+                            <li><a href="#data-usage">3. 我们如何使用您的数据</a></li>
+                            <li><a href="#data-retention">4. 数据保留</a></li>
+                            <li><a href="#data-sharing">5. 数据共享</a></li>
+                            <li><a href="#your-rights">6. 您的权利</a></li>
+                            <li><a href="#security">7. 数据安全</a></li>
+                            <li><a href="#contact">8. 联系信息</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who We Are Section -->
+        <section id="who-we-are" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate">
+                        <div class="privacy-icon">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6 text-center">我们是谁</h2>
+                        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+                            PD2i（合作伙伴发展工业国际）是一家专门从事PVD涂层技术和工业解决方案的公司。我们的网站地址是：<strong>https://pd2i.com</strong>
+                        </p>
+                        <div class="info-box">
+                            <p class="text-sm">
+                                <strong>数据控制者：</strong>PD2i 法国<br>
+                                <strong>地址：</strong>86, bd Malesherbes – 75008 巴黎 – 法国<br>
+                                <strong>联系方式：</strong>admin@pd2i.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Collection Section -->
+        <section id="data-collection" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate delay-200">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6 text-center">我们收集哪些个人数据以及原因</h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">联系表单</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    当您通过我们的联系表单与我们联系时，我们收集：
+                                </p>
+                                <ul class="space-y-2 text-gray-700 ml-4">
+                                    <li class="flex items-start">
+                                        <span class="text-pd2i-blue mr-2">•</span>
+                                        您的姓名和电子邮件地址
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-pd2i-blue mr-2">•</span>
+                                        您的消息内容
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-pd2i-blue mr-2">•</span>
+                                        用于安全目的的IP地址和时间戳
+                                    </li>
+                                </ul>
+                                <p class="text-gray-700 leading-relaxed mt-4">
+                                    <strong>目的：</strong>回应您的咨询并提供客户支持。
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">媒体上传</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    如果您向网站上传图像，应避免上传包含嵌入位置数据（EXIF GPS）的图像。网站访问者可以从网站上的图像下载并提取任何位置数据。
+                                </p>
+                                <div class="info-box warning">
+                                    <p class="text-sm font-medium">
+                                        ⚠️ 请在上传前从图像中删除位置数据以保护您的隐私。
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Cookie</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    我们使用Cookie来增强您的浏览体验。如果您留下评论或与我们联系，您可以选择在Cookie中保存您的姓名和电子邮件地址以方便使用。这些Cookie将持续一年。
+                                </p>
+                                <p class="text-gray-700 leading-relaxed">
+                                    有关我们Cookie使用的详细信息，请参阅我们的<a href="cookies.html" class="text-pd2i-blue hover:underline">Cookie政策</a>。
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">网站分析</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    我们收集基本的网站分析数据以了解访问者如何使用我们的网站：
+                                </p>
+                                <ul class="space-y-2 text-gray-700 ml-4">
+                                    <li class="flex items-start">
+                                        <span class="text-pd2i-blue mr-2">•</span>
+                                        访问的页面和在网站上花费的时间
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-pd2i-blue mr-2">•</span>
+                                        浏览器类型和设备信息
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-pd2i-blue mr-2">•</span>
+                                        一般地理位置（国家/城市级别）
+                                    </li>
+                                </ul>
+                                <p class="text-gray-700 leading-relaxed mt-4">
+                                    <strong>目的：</strong>改善我们的网站性能和用户体验。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Embedded Content Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate delay-300">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">来自其他网站的嵌入内容</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            本网站上的文章可能包含嵌入内容（例如视频、图像、文章等）。来自其他网站的嵌入内容的行为方式与访问者访问其他网站时完全相同。
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            这些网站可能会收集有关您的数据，使用Cookie，嵌入额外的第三方跟踪，并监控您与该嵌入内容的交互，包括如果您有帐户并登录到该网站，则跟踪您与嵌入内容的交互。
+                        </p>
+                        <div class="info-box important">
+                            <p class="text-sm font-medium">
+                                🔴 <strong>重要提示：</strong>我们无法控制嵌入的第三方内容的隐私做法。请查看这些外部服务的隐私政策。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Usage Section -->
+        <section id="data-usage" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">我们如何使用您的数据</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-4">合法目的：</h3>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        回应客户咨询
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        提供技术支持
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        改进我们的服务
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        网站安全和欺诈预防
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        法律合规
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-4">我们不会：</h3>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li class="flex items-start">
+                                        <span class="text-red-500 mr-2">✗</span>
+                                        将您的数据出售给第三方
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-500 mr-2">✗</span>
+                                        未经同意将数据用于营销
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-500 mr-2">✗</span>
+                                        不必要地共享个人数据
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-500 mr-2">✗</span>
+                                        在其他网站上跟踪您
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Retention Section -->
+        <section id="data-retention" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">数据保留</h2>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-pd2i-blue pl-4">
+                                <h3 class="font-bold text-gray-800 mb-2">联系表单数据</h3>
+                                <p class="text-gray-700 text-sm">保留3年或直到您请求删除</p>
+                            </div>
+                            <div class="border-l-4 border-pd2i-blue pl-4">
+                                <h3 class="font-bold text-gray-800 mb-2">网站分析</h3>
+                                <p class="text-gray-700 text-sm">匿名数据保留25个月</p>
+                            </div>
+                            <div class="border-l-4 border-pd2i-blue pl-4">
+                                <h3 class="font-bold text-gray-800 mb-2">Cookie</h3>
+                                <p class="text-gray-700 text-sm">最多12个月或直到手动删除</p>
+                            </div>
+                            <div class="border-l-4 border-pd2i-blue pl-4">
+                                <h3 class="font-bold text-gray-800 mb-2">法律义务</h3>
+                                <p class="text-gray-700 text-sm">某些数据可能因法律合规而保留更长时间</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Your Rights Section -->
+        <section id="your-rights" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">您在GDPR下的权利</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-4">您有权：</h3>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">📄</span>
+                                        <div><strong>访问</strong> - 请求您个人数据的副本</div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-blue-500 mr-2">✏️</span>
+                                        <div><strong>更正</strong> - 更正不准确的数据</div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-500 mr-2">🗑️</span>
+                                        <div><strong>删除</strong> - 请求删除您的数据</div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-orange-500 mr-2">⏸️</span>
+                                        <div><strong>限制</strong> - 限制我们如何处理您的数据</div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-purple-500 mr-2">📦</span>
+                                        <div><strong>可携性</strong> - 以结构化格式接收您的数据</div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-gray-500 mr-2">🚫</span>
+                                        <div><strong>反对</strong> - 选择退出某些数据处理</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-4">如何行使您的权利：</h3>
+                                <p class="text-gray-700 text-sm mb-4">
+                                    通过<a href="mailto:admin@pd2i.com" class="text-pd2i-blue hover:underline">admin@pd2i.com</a>与我们联系并提出您的请求。我们将在30天内回复。
+                                </p>
+                                <div class="info-box success">
+                                    <p class="text-sm font-medium">
+                                        ✅ 除非请求过多或重复，否则所有请求均免费处理。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section id="security" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">数据安全</h2>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            我们实施适当的技术和组织措施来保护您的个人数据：
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="text-center">
+                                <div class="privacy-icon mx-auto" style="width: 60px; height: 60px;">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-2">加密</h3>
+                                <p class="text-gray-600 text-sm">用于数据传输的SSL/TLS加密</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="privacy-icon mx-auto" style="width: 60px; height: 60px;">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-2">访问控制</h3>
+                                <p class="text-gray-600 text-sm">仅限授权人员访问</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="privacy-icon mx-auto" style="width: 60px; height: 60px;">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-2">安全存储</h3>
+                                <p class="text-gray-600 text-sm">具有定期备份的安全托管</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="privacy-card scroll-animate">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">对我们的隐私政策有疑问？</h2>
+                        <p class="text-gray-700 leading-relaxed mb-8">
+                            如果您对我们的隐私政策有疑问、希望行使您的权利或需要报告数据保护问题，请与我们联系。
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <a href="contacts.html" class="contact-btn">
+                                联系我们
+                            </a>
+                            <div class="text-gray-600">
+                                <p class="text-sm">或通过电子邮件：<a href="mailto:admin@pd2i.com" class="text-pd2i-blue hover:underline">admin@pd2i.com</a></p>
+                            </div>
+                        </div>
+                        <div class="info-box mt-6">
+                            <p class="text-sm">
+                                <strong>数据保护官：</strong>对于严重的隐私问题，您还可以通过<a href="https://www.cnil.fr" class="text-pd2i-blue hover:underline">www.cnil.fr</a>联系法国数据保护机构（CNIL）
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Last Updated -->
+        <section class="py-8 bg-gray-50 border-t border-gray-200">
+            <div class="container mx-auto px-4">
+                <div class="text-center text-gray-600 text-sm">
+                    <p>最后更新：2025年1月</p>
+                    <p class="mt-2">本隐私政策可能会不时更新。我们将通知您任何重大变更。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footer"></footer>
+
+    <!-- Initialize Components -->
+    <script src="../components/Header.js?v=1.5"></script>
+    <script src="../components/Footer.js"></script>
+    <script>
+        window.headerInstance = new Header({
+            logoSrc: '../assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            logoLink: 'index.html',
+            currentLang: 'ZH',
+            languages: ['EN', 'ZH', 'FR']
+        });
+        
+        window.footerInstance = new Footer({
+            logoSrc: '../assets/images/logo-pd2i-footer.png',
+            logoAlt: 'PD2i Logo',
+            currentLang: 'ZH'
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for table of contents
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="https://cmp.osano.com/n5V2uYyqKw/4c1b4d95-ff4b-4405-bb68-1637ebe3d1ad/osano.js"></script>
+
+</body>
+</html>

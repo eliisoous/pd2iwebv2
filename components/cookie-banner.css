@@ -1,0 +1,279 @@
+/**
+ * Cookie Consent Banner - PD2i Website
+ * Styles CSS pour la bannière de consentement aux cookies
+ * ====================================================
+ * 
+ * Design moderne et professionnel
+ * Responsive (mobile + desktop)
+ * Animation fluide d'apparition
+ * Accessible (ARIA compliant)
+ */
+
+/* ============================================
+   Variables CSS
+   ============================================ */
+:root {
+    --cookie-banner-bg: #FFFFFF;
+    --cookie-banner-border: #E5E7EB;
+    --cookie-banner-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+    --cookie-banner-shadow-hover: 0 -10px 15px -3px rgba(0, 0, 0, 0.1), 0 -4px 6px -2px rgba(0, 0, 0, 0.05);
+    --cookie-banner-pd2i-blue: #0083CA;
+    --cookie-banner-pd2i-blue-hover: #0066A3;
+    --cookie-banner-text: #1F2937;
+    --cookie-banner-text-light: #6B7280;
+    --cookie-banner-transition: all 0.3s ease;
+    --cookie-banner-z-index: 9999;
+}
+
+/* ============================================
+   Conteneur principal de la bannière
+   ============================================ */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--cookie-banner-bg);
+    border-top: 1px solid var(--cookie-banner-border);
+    box-shadow: var(--cookie-banner-shadow);
+    z-index: var(--cookie-banner-z-index);
+    padding: 0;
+    margin: 0;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* État visible de la bannière */
+.cookie-banner.cookie-banner--visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ============================================
+   Conteneur interne
+   ============================================ */
+.cookie-banner__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 1rem;
+}
+
+/* ============================================
+   Contenu de la bannière
+   ============================================ */
+.cookie-banner__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   Icône cookie
+   ============================================ */
+.cookie-banner__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    color: var(--cookie-banner-pd2i-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cookie-banner__icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================================
+   Message de la bannière
+   ============================================ */
+.cookie-banner__message {
+    flex: 1;
+    min-width: 0;
+}
+
+.cookie-banner__text {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--cookie-banner-text);
+    font-weight: 400;
+}
+
+/* ============================================
+   Actions (boutons)
+   ============================================ */
+.cookie-banner__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   Styles des boutons
+   ============================================ */
+.cookie-banner__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: var(--cookie-banner-transition);
+    white-space: nowrap;
+    font-family: inherit;
+}
+
+/* Bouton "Accepter" - Style primaire */
+.cookie-banner__btn--accept {
+    background: linear-gradient(135deg, var(--cookie-banner-pd2i-blue) 0%, var(--cookie-banner-pd2i-blue-hover) 100%);
+    color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 131, 202, 0.2);
+}
+
+.cookie-banner__btn--accept:hover {
+    background: linear-gradient(135deg, var(--cookie-banner-pd2i-blue-hover) 0%, #005080 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 131, 202, 0.3);
+}
+
+.cookie-banner__btn--accept:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 131, 202, 0.2);
+}
+
+.cookie-banner__btn--accept:focus {
+    outline: 2px solid var(--cookie-banner-pd2i-blue);
+    outline-offset: 2px;
+}
+
+/* Bouton "En savoir plus" - Style secondaire */
+.cookie-banner__btn--learn-more {
+    background-color: transparent;
+    color: var(--cookie-banner-pd2i-blue);
+    border: 2px solid var(--cookie-banner-pd2i-blue);
+}
+
+.cookie-banner__btn--learn-more:hover {
+    background-color: var(--cookie-banner-pd2i-blue);
+    color: #FFFFFF;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 131, 202, 0.2);
+}
+
+.cookie-banner__btn--learn-more:active {
+    transform: translateY(0);
+}
+
+.cookie-banner__btn--learn-more:focus {
+    outline: 2px solid var(--cookie-banner-pd2i-blue);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   Responsive Design - Tablette
+   ============================================ */
+@media (max-width: 768px) {
+    .cookie-banner__container {
+        padding: 1rem;
+    }
+    
+    .cookie-banner__content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .cookie-banner__icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .cookie-banner__text {
+        font-size: 0.875rem;
+    }
+    
+    .cookie-banner__actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .cookie-banner__btn {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* ============================================
+   Responsive Design - Mobile
+   ============================================ */
+@media (max-width: 480px) {
+    .cookie-banner__container {
+        padding: 0.875rem 0.75rem;
+    }
+    
+    .cookie-banner__text {
+        font-size: 0.8125rem;
+        line-height: 1.4;
+    }
+    
+    .cookie-banner__btn {
+        padding: 0.625rem 0.875rem;
+        font-size: 0.8125rem;
+    }
+}
+
+/* ============================================
+   États d'accessibilité
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    .cookie-banner {
+        transition: opacity 0.2s ease-out;
+    }
+    
+    .cookie-banner__btn {
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    
+    .cookie-banner__btn:hover {
+        transform: none;
+    }
+}
+
+/* ============================================
+   Mode sombre (optionnel, pour compatibilité future)
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    /* Conserver le fond blanc pour la bannière même en mode sombre
+       pour une meilleure visibilité et conformité */
+}
+
+/* ============================================
+   Impression (masquer la bannière)
+   ============================================ */
+@media print {
+    .cookie-banner {
+        display: none !important;
+    }
+}
+
+
+
+
+
+

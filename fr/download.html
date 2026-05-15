@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title -->
+    <title>Centre de téléchargement | Brochures PD2i & Catalogues d'équipements PVD</title>
+    
+    <meta name="description" content="Téléchargez les brochures et catalogues PD2i : équipements de revêtement PVD, systèmes de nitruration plasma, solutions de nettoyage Green Clean. Obtenez les spécifications techniques et informations produits.">
+    <meta name="author" content="PD2i">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cmp.osano.com https://cdn.tailwindcss.com blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cmp.osano.com; worker-src blob:;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.pd2i.com/fr/download.html">
+    <!-- Hreflang tags for multilingual support -->
+    <link rel="alternate" hreflang="en" href="https://www.pd2i.com/download.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.pd2i.com/zh/download.html">
+    <link rel="alternate" hreflang="fr" href="https://www.pd2i.com/fr/download.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.pd2i.com/download.html">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../assets/images/logo-pd2i.png" as="image">
+    <link rel="preload" href="../components/header.css" as="style">
+    <link rel="preload" href="../assets/css/style.css" as="style">
+
+    <!-- Favicon Configuration -->
+    <link rel="icon" href="../assets/images/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../assets/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicon/favicon-96x96.png">
+    <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#0083CA">
+    <meta name="theme-color" content="#0083CA">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.pd2i.com/fr/download.html">
+    <meta property="og:site_name" content="PD2i">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Centre de téléchargement | Brochures et catalogues PD2i">
+    <meta property="og:description" content="Téléchargez les catalogues produits et la documentation technique PD2i pour les équipements de revêtement PVD.">
+    <meta property="og:image" content="https://www.pd2i.com/assets/images/sections/coating-equipment.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:image:alt" content="Catalogues produits PD2i">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Centre de téléchargement PD2i">
+    <meta name="twitter:description" content="Téléchargez les catalogues produits et la documentation technique">
+    <meta name="twitter:image" content="https://www.pd2i.com/assets/images/sections/coating-equipment.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000'
+                    },
+                    fontFamily: {
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="../components/header.css">
+    <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <style>
+        .hero-download {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 50%, #87CEEB 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 60vh;
+        }
+        .hero-download::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+        }
+        .download-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        .download-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2, #87CEEB);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        .download-card:hover::before { transform: scaleX(1); }
+        .download-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border-color: rgba(0, 131, 202, 0.2);
+        }
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(0, 131, 202, 0.1) 0%, rgba(74, 144, 226, 0.1) 100%);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .icon-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #0083CA, #4A90E2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .download-card:hover .icon-container::before { opacity: 0.1; }
+        .icon-container svg {
+            width: 40px;
+            height: 40px;
+            color: #0083CA;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+        .download-card:hover .icon-container svg {
+            color: #4A90E2;
+            transform: scale(1.1);
+        }
+        .download-btn-modern {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .download-btn-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .download-btn-modern:hover::before { left: 100%; }
+        .download-btn-modern:hover {
+            background: linear-gradient(135deg, #4A90E2 0%, #0083CA 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 131, 202, 0.4);
+        }
+        .category-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .category-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+        .category-subtitle {
+            color: #6b7280;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .all-downloads-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 2rem;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .all-downloads-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 131, 202, 0.05) 0%, transparent 50%);
+            animation: rotate 30s linear infinite;
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #0083CA 0%, #0066A3 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-primary:hover::before { left: 100%; }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
+            color: white;
+        }
+        .btn-secondary {
+            background: transparent;
+            color: #0083CA;
+            border: 2px solid #0083CA;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        .btn-secondary:hover {
+            background: #0083CA;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3);
+        }
+        @media (max-width: 768px) {
+            .hero-download { min-height: 50vh; }
+            .category-title { font-size: 2rem; }
+            .download-card { padding: 1.5rem; }
+            .all-downloads-section { padding: 2rem; border-radius: 1.5rem; }
+            .btn-primary, .btn-secondary {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        @media (max-width: 640px) {
+            .btn-primary, .btn-secondary {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PD2i",
+      "legalName": "Partner Development Industry International",
+      "url": "https://www.pd2i.com",
+      "logo": "https://www.pd2i.com/assets/images/logo-pd2i.png"
+    }
+    </script>
+</head>
+<body class="font-roboto bg-gray-50 text-pd2i-black">
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-download flex items-center justify-center text-white relative z-10">
+            <div class="container mx-auto px-4 text-center relative z-20">
+                <div class="max-w-4xl mx-auto scroll-animate">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                        Centre de téléchargement
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90">
+                        Accédez à notre bibliothèque complète de documentation technique
+                    </p>
+                    <p class="text-lg opacity-80 max-w-2xl mx-auto mb-8">
+                        Découvrez des informations complètes sur nos équipements de revêtement PVD, 
+                        systèmes de nitruration plasma, solutions de nettoyage et technologies de préparation des arêtes
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="stats-grid">
+                        <div class="stat-item scroll-animate" style="animation-delay: 0.2s;">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Brochures techniques</span>
+                        </div>
+                        <div class="stat-item scroll-animate" style="animation-delay: 0.4s;">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Pages de documentation</span>
+                        </div>
+                        <div class="stat-item scroll-animate" style="animation-delay: 0.6s;">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Catégories de technologies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Download Section -->
+        <section class="py-20 relative">
+            <div class="container mx-auto px-4 max-w-7xl">
+                
+                <!-- PVD Coating Equipment -->
+                <div class="mb-20 scroll-animate">
+                    <div class="category-header">
+                        <h2 class="category-title">Équipements de revêtement PVD</h2>
+                        <p class="category-subtitle">
+                            Systèmes avancés de dépôt physique en phase vapeur pour applications de revêtement industriel
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- PVD Cutting Tools -->
+                        <div class="download-card scroll-animate flex flex-col h-full" style="animation-delay: 0.1s;">                        
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Technologie PVD pour l'outillage</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Guide technique complet pour les solutions de revêtement PVD pour outils de coupe. 
+                            </p>
+                            
+                            <a href="/downloadpd2i/Portfolio-coating-equipment.pdf" download class="download-btn-modern mt-auto">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Télécharger équipements haute performance
+                            </a>
+                        </div>
+
+                        <!-- PVD MPC500 -->
+                        <div class="download-card scroll-animate flex flex-col h-full" style="animation-delay: 0.2s;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">MPC 500</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Production – Revêtement haute performance 
+                            </p>
+                            
+                            <a href="/downloadpd2i/MpC500.pdf" download class="download-btn-modern mt-auto">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Télécharger MPC 500
+                            </a>
+                        </div>
+
+                        <!-- MPC 600/1000 -->
+                        <div class="download-card scroll-animate flex flex-col h-full" style="animation-delay: 0.3s;">        
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">MPC 600/1000</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Système de revêtement PVD polyvalent
+                            </p>
+                            
+                            <a href="/downloadpd2i/MpC-600-1000-angl.pdf" download class="download-btn-modern mt-auto">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Télécharger MPC 600/1000
+                            </a>
+                        </div>
+
+                        <!-- MPC 1500/2500 -->
+                        <div class="download-card scroll-animate flex flex-col h-full" style="animation-delay: 0.4s;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">MPC 1500/2500</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Système de revêtement PVD grande capacité pour production à haut volume.
+                            </p>
+                            
+                            <a href="/downloadpd2i/MpC-1500-2500-angl.pdf" download class="download-btn-modern mt-auto">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Télécharger MPC 1500/2500
+                            </a>
+                        </div>
+
+                        <!-- Modular Hybrid PVD / PeCVD Coating Systems -->
+                        <div class="download-card scroll-animate flex flex-col h-full" style="animation-delay: 0.5s;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Systèmes hybrides modulaires PVD / PeCVD</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Systèmes de revêtement hybrides avancés combinant les technologies PVD et PECVD.
+                            </p>
+                            
+                            <a href="/downloadpd2i/Modular Hybrid PVD  PECVD Coating System.pdf" download class="download-btn-modern mt-auto">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Télécharger série DLC
+                            </a>
+                        </div>
+
+                        <!-- Super Hard Carbon PVD Coating System -->
+                        <div class="download-card scroll-animate flex flex-col h-full" style="animation-delay: 0.6s;">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Système de revêtement PVD carbone super dur</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Solutions de revêtement carbone super dur haute performance.
+                            </p>
+                            
+                            <a href="/downloadpd2i/TaC.pdf" download class="download-btn-modern mt-auto">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Télécharger TaC
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surface Treatment -->
+                <div class="mb-20 scroll-animate">
+                    <div class="category-header">
+                        <h2 class="category-title">Traitement de surface</h2>
+                        <p class="category-subtitle">
+                            Technologies avancées de modification de surface pour des propriétés matérielles améliorées
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Plasma Nitriding -->
+                        <div class="download-card scroll-animate flex flex-col h-full" style="animation-delay: 0.1s;">
+                        
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Nitruration plasma</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Solutions de nitruration plasma économiques pour composants de précision. Inclut la technologie Phase S, 
+                                les procédés HPPN et les directives de traitement complètes.
+                            </p>
+                            
+                            <a href="/downloadpd2i/plasma-nitriding.pdf" download class="download-btn-modern mt-auto">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Télécharger Nitruration plasma
+                            </a>
+                        </div>
+
+                        <!-- Edge Preparation -->
+                        <div class="download-card scroll-animate flex flex-col h-full" style="animation-delay: 0.2s;">
+                            
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Préparation des arêtes</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Préparation des arêtes et post-traitement pour outils de coupe haute performance
+                            </p>
+                            
+                            <a href="../downloadpd2i/4 pages JET PL24 francais.pdf.pdf" download class="download-btn-modern mt-auto">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Télécharger Préparation des arêtes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cleaning Solutions -->
+                <div class="mb-20 scroll-animate">
+                    <div class="category-header">
+                        <h2 class="category-title">Solutions de nettoyage</h2>
+                        <p class="category-subtitle">
+                            Technologie avancée de nettoyage par ultrasons pour applications industrielles de précision
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="download-card scroll-animate flex flex-col h-full" style="animation-delay: 0.1s;">
+                            
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Green Clean Ultrasons</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Processus de nettoyage par ultrasons avancé en 5 étapes. Plusieurs configurations disponibles 
+                                avec capacités de traitement direct des palettes CNC pour une efficacité maximale.
+                            </p>
+                            
+                            <a href="../downloadpd2i/GreenCleanFR.pdf" download class="download-btn-modern mt-auto">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Télécharger Green Clean
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download All Section -->
+                <div class="all-downloads-section mb-20 scroll-animate">
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Pack de documentation complet</h2>
+                        <p class="text-gray-600 mb-8 text-lg">
+                            Découvrez la gamme complète de systèmes de revêtement PVD de PD2i, de technologies de traitement de surface et de solutions d'ingénierie de précision. Des outils de coupe haute performance à la nitruration plasma avancée en passant par la préparation des arêtes, explorez notre portfolio de solutions innovantes conçues pour améliorer les propriétés des matériaux et optimiser les processus de fabrication.
+                        </p>
+                        
+                        <a href="/downloadpd2i/Pd2i 16 pages.pdf" download class="download-btn-modern text-lg px-12 py-4 max-w-md mx-auto">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"/>
+                            </svg>
+                            Télécharger brochure PD2i
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="scroll-animate">
+                    <div class="download-card">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-pd2i-blue mb-6 text-center">
+                            Besoin de conseils d'experts ?
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-8 leading-relaxed text-center">
+                            Nos spécialistes techniques sont prêts à vous aider à sélectionner la solution optimale pour vos besoins d'application spécifiques.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="contacts.html" class="btn-primary">
+                                Contactez nos experts
+                            </a>
+                            <a href="pvd-cutting-tools.html" class="btn-secondary">
+                                Explorez nos solutions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Header Component -->
+    <script src="../components/Header.js?v=1.5"></script>
+    
+    <!-- Footer Component -->
+    <script src="../components/Footer.js"></script>
+    
+    <script>
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Initialize Header
+        window.headerInstance = new Header({
+            logoSrc: '../assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            logoLink: 'index.html',
+            currentPage: 'download',
+            currentLang: 'FR',
+            languages: ['EN', 'ZH', 'FR'],
+            navigationItems: [
+                { label: 'Accueil', href: 'index.html', type: 'link', pageId: 'home' },
+                {
+                    label: 'Équipements',
+                    labelCompact: 'Équipements',
+                    href: '#',
+                    type: 'dropdown',
+                    pageId: 'coating-equipments',
+                    items: [
+                        { label: 'Technologie PVD pour l\'outillage', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
+                        { label: 'Système PVD pour moules et matrices', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
+                        { label: 'DLC pour revêtements tribologiques', href: 'dlc.html', pageId: 'dlc' },
+                        { label: 'Solutions clé en main', href: 'turnkey-solutions.html', pageId: 'turnkey-solutions' }
+                    ]
+                },
+                { label: 'Prep. arêtes', labelCompact: 'Prep. arêtes', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
+                { label: 'Green Clean', href: 'greenclean-ultrasonic-cleaning.html', type: 'link', pageId: 'greenclean-ultrasonic-cleaning' },
+                { label: 'Nitruration', labelCompact: 'Nitruration', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
+                { label: 'Services', href: 'services.html', type: 'link', pageId: 'services' },
+                { label: 'Actualités', href: 'news.html', type: 'link', pageId: 'news' },
+                { label: 'À propos', labelCompact: 'À propos', href: 'about-us.html', type: 'link', pageId: 'about-us' }
+            ]
+        });
+        
+        // Initialize Footer
+        window.footerInstance = new Footer({
+            logoSrc: '../assets/images/logo-pd2i-footer.png',
+            logoAlt: 'PD2i Logo',
+            slogan: 'Votre partenaire quand la performance compte',
+            companyInfo: {
+                name: 'PD2i FRANCE',
+                address: '86, bd Malesherbes',
+                city: '75008 Paris',
+                phone: '+33 (0) 153 75 45 05',
+                email: 'admin@pd2i.com'
+            },
+            navigationLinks: [
+                { label: 'À propos', href: 'about-us.html' },
+                { label: 'Contact', href: 'contacts.html' },
+                { label: 'Téléchargements', href: 'download.html' },
+                { label: 'Actualités', href: 'news.html' }
+            ],
+            socialLinks: [
+                { 
+                    platform: 'linkedin', 
+                    href: 'https://linkedin.com/company/pd2i',
+                    icon: 'linkedin',
+                    label: 'Suivez-nous'
+                }
+            ],
+            bottomLinks: [
+                { label: 'Téléchargements', href: 'download.html' },
+                { label: 'Cookies', href: 'cookies.html' },
+                { label: 'Politique de confidentialité', href: 'privacy.html' },
+                { label: 'Mentions légales', href: 'legal.html' }
+            ],
+            copyrightYear: 2025
+        });
+    </script>
+
+    <script src="https://cmp.osano.com/n5V2uYyqKw/4c1b4d95-ff4b-4405-bb68-1637ebe3d1ad/osano.js"></script>
+
+</body>
+</html>

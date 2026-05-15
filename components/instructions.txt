@@ -1,0 +1,265 @@
+================================================================================
+INSTRUCTIONS D'INTÉGRATION - BANNIÈRE DE CONSENTEMENT AUX COOKIES
+PD2i Website - Cookie Consent Banner
+================================================================================
+
+Cette bannière de consentement aux cookies est conforme au RGPD et s'intègre
+facilement dans toutes les pages HTML de votre site.
+
+================================================================================
+ÉTAPES D'INTÉGRATION
+================================================================================
+
+1. INCLURE LE HTML DE LA BANNIÈRE
+   -------------------------------
+   
+   Ajoutez le code HTML de la bannière juste avant la balise </body> dans 
+   chaque page HTML de votre site :
+   
+   <!-- Cookie Consent Banner -->
+   <div id="cookieBanner" class="cookie-banner" role="dialog" aria-labelledby="cookieBannerTitle" aria-live="polite">
+       <div class="cookie-banner__container">
+           <div class="cookie-banner__content">
+               <div class="cookie-banner__icon" aria-hidden="true">
+                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="currentColor"/>
+                       <path d="M8.5 10C9.33 10 10 9.33 10 8.5C10 7.67 9.33 7 8.5 7C7.67 7 7 7.67 7 8.5C7 9.33 7.67 10 8.5 10ZM15.5 10C16.33 10 17 9.33 17 8.5C17 7.67 16.33 7 15.5 7C14.67 7 14 7.67 14 8.5C14 9.33 14.67 10 15.5 10ZM12 17.5C14.33 17.5 16.31 16.04 17.54 14H6.46C7.69 16.04 9.67 17.5 12 17.5Z" fill="currentColor"/>
+                   </svg>
+               </div>
+               <div class="cookie-banner__message">
+                   <p id="cookieBannerTitle" class="cookie-banner__text">
+                       <span class="cookie-banner__text-fr">
+                           Nous utilisons des cookies pour améliorer votre expérience de navigation. 
+                           En continuant à utiliser ce site, vous acceptez notre utilisation des cookies.
+                       </span>
+                       <span class="cookie-banner__text-en" style="display: none;">
+                           We use cookies to improve your browsing experience. 
+                           By continuing to use this site, you accept our use of cookies.
+                       </span>
+                   </p>
+               </div>
+               <div class="cookie-banner__actions">
+                   <button type="button" id="cookieBannerAccept" class="cookie-banner__btn cookie-banner__btn--accept" aria-label="Accepter tous les cookies">
+                       <span class="cookie-banner__btn-text-fr">Accepter tous les cookies</span>
+                       <span class="cookie-banner__btn-text-en" style="display: none;">Accept all cookies</span>
+                   </button>
+                   <a href="cookies.html" id="cookieBannerLearnMore" class="cookie-banner__btn cookie-banner__btn--learn-more" aria-label="En savoir plus sur notre politique de cookies">
+                       <span class="cookie-banner__btn-text-fr">En savoir plus</span>
+                       <span class="cookie-banner__btn-text-en" style="display: none;">Learn more</span>
+                   </a>
+               </div>
+           </div>
+       </div>
+   </div>
+   
+   OU utilisez directement le fichier cookie-banner.html en l'incluant :
+   
+   <!-- Option 1 : Utiliser un iframe (non recommandé) -->
+   <!-- Option 2 : Copier-coller le contenu du fichier -->
+   <!-- Option 3 : Utiliser un système de composants (recommandé) -->
+
+
+2. INCLURE LE FICHIER CSS
+   -----------------------
+   
+   Ajoutez la référence au fichier CSS dans la section <head> de chaque page :
+   
+   <link rel="stylesheet" href="components/cookie-banner.css">
+   
+   OU si vous utilisez un chemin relatif différent, ajustez le chemin :
+   
+   <link rel="stylesheet" href="components/cookie-banner.css">
+
+
+3. INCLURE LE FICHIER JAVASCRIPT
+   ------------------------------
+   
+   Ajoutez la référence au fichier JavaScript juste avant la balise </body> :
+   
+   <script src="components/cookie-banner.js"></script>
+   
+   IMPORTANT : Placez ce script APRÈS le HTML de la bannière pour que les 
+   éléments DOM soient disponibles.
+
+
+4. EXEMPLE D'INTÉGRATION COMPLÈTE
+   -------------------------------
+   
+   Voici un exemple de structure HTML complète :
+   
+   <!DOCTYPE html>
+   <html lang="fr">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Votre Page - PD2i</title>
+       
+       <!-- Autres liens CSS -->
+       <link rel="stylesheet" href="assets/css/style.css">
+       
+       <!-- Cookie Banner CSS -->
+       <link rel="stylesheet" href="components/cookie-banner.css">
+   </head>
+   <body>
+       <!-- Contenu de votre page -->
+       
+       <!-- Cookie Consent Banner HTML -->
+       <!-- (Copier le contenu de cookie-banner.html ici) -->
+       
+       <!-- Cookie Banner JavaScript -->
+       <script src="components/cookie-banner.js"></script>
+       
+       <!-- Autres scripts -->
+   </body>
+   </html>
+
+
+================================================================================
+INTÉGRATION DANS INDEX.HTML (EXEMPLE)
+================================================================================
+
+Pour intégrer dans index.html, ajoutez :
+
+1. Dans <head>, après les autres liens CSS (ligne ~121) :
+   
+   <link rel="stylesheet" href="components/cookie-banner.css">
+
+2. Avant </body>, après les autres scripts (ligne ~744) :
+   
+   <!-- Cookie Consent Banner HTML -->
+   <div id="cookieBanner" class="cookie-banner" role="dialog" aria-labelledby="cookieBannerTitle" aria-live="polite">
+       <!-- (Copier le contenu complet de cookie-banner.html) -->
+   </div>
+   
+   <!-- Cookie Consent Banner JavaScript -->
+   <script src="components/cookie-banner.js"></script>
+
+
+================================================================================
+FONCTIONNALITÉS
+================================================================================
+
+✓ Affichage automatique au premier chargement
+✓ Message en français et anglais (détection automatique)
+✓ 2 boutons : "Accepter tous les cookies" et "En savoir plus"
+✓ Le bouton "En savoir plus" redirige vers cookies.html
+✓ Stockage du consentement dans localStorage
+✓ Ne réapparaît pas si l'utilisateur a déjà accepté
+✓ Animation fluide d'apparition (fade-in + slide-up)
+✓ Fermeture automatique après clic sur "Accepter"
+✓ Responsive (mobile + desktop)
+✓ Accessible (ARIA labels, support lecteurs d'écran)
+✓ Compatible tous navigateurs modernes
+✓ Léger et rapide à charger
+
+
+================================================================================
+PERSONNALISATION
+================================================================================
+
+1. CHANGER LA LANGUE PAR DÉFAUT
+   -----------------------------
+   Dans cookie-banner.js, modifiez la méthode detectLanguage() pour forcer 
+   une langue spécifique.
+
+2. CHANGER LE DÉLAI D'AFFICHAGE
+   -----------------------------
+   Dans cookie-banner.js, modifiez la propriété this.SHOW_DELAY (en millisecondes).
+
+3. CHANGER LA PAGE DE POLITIQUE
+   -----------------------------
+   Dans cookie-banner.html, modifiez l'attribut href du lien "En savoir plus" :
+   
+   <a href="cookies.html" ...>
+   
+   Remplacez "cookies.html" par le chemin de votre page de politique.
+
+4. MODIFIER LES COULEURS
+   ----------------------
+   Dans cookie-banner.css, modifiez les variables CSS dans :root :
+   
+   --cookie-banner-pd2i-blue: #0083CA;
+   --cookie-banner-pd2i-blue-hover: #0066A3;
+
+
+================================================================================
+TEST ET DÉBOGAGE
+================================================================================
+
+1. TESTER L'AFFICHAGE
+   ------------------
+   - Ouvrez votre page dans un navigateur
+   - La bannière doit apparaître en bas de l'écran après 0.5 seconde
+   - Cliquez sur "Accepter" → la bannière doit disparaître
+   - Rechargez la page → la bannière ne doit PAS réapparaître
+
+2. RÉINITIALISER LE CONSENTEMENT (pour tester)
+   -------------------------------------------
+   Ouvrez la console du navigateur (F12) et tapez :
+   
+   resetCookieConsent()
+   
+   Puis rechargez la page. La bannière réapparaîtra.
+
+3. VÉRIFIER LE STOCKAGE
+   ---------------------
+   Dans la console du navigateur (F12) :
+   
+   localStorage.getItem('pd2i_cookie_consent')
+   
+   Doit retourner "accepted" après acceptation.
+
+4. TESTER LA RESPONSIVITÉ
+   -----------------------
+   - Réduisez la largeur de la fenêtre du navigateur
+   - La bannière doit s'adapter et les boutons doivent s'empiler verticalement
+   - Testez sur un vrai appareil mobile si possible
+
+
+================================================================================
+CONFORMITÉ RGPD
+================================================================================
+
+Cette bannière respecte les exigences du RGPD :
+
+✓ Consentement explicite requis avant utilisation des cookies non essentiels
+✓ Information claire sur l'utilisation des cookies
+✓ Possibilité de refuser (via le lien "En savoir plus" vers la page de politique)
+✓ Stockage du consentement pour ne pas redemander à chaque visite
+✓ Expiration du consentement après 1 an (configurable)
+
+IMPORTANT : Cette bannière gère uniquement l'affichage et le stockage du 
+consentement. Vous devez vous assurer que :
+- Les cookies non essentiels ne sont chargés qu'après acceptation
+- Votre page cookies.html contient toutes les informations requises
+- Vous respectez les autres obligations RGPD (droit à l'oubli, etc.)
+
+
+================================================================================
+SUPPORT ET MAINTENANCE
+================================================================================
+
+Pour toute question ou problème :
+- Vérifiez la console du navigateur pour les erreurs JavaScript
+- Vérifiez que tous les fichiers sont correctement chargés
+- Vérifiez que les chemins des fichiers sont corrects
+- Testez dans différents navigateurs (Chrome, Firefox, Safari, Edge)
+
+
+================================================================================
+VERSION
+================================================================================
+
+Version: 1.0.0
+Date: Janvier 2025
+Auteur: PD2i Development Team
+Compatibilité: Navigateurs modernes (Chrome, Firefox, Safari, Edge)
+
+
+================================================================================
+
+
+
+
+
+
