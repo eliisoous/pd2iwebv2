@@ -29,6 +29,8 @@ class Footer {
             ...options
         };
         
+        this.options.bottomLinks = this.ensureBottomLinksIncludeTerms(this.options.bottomLinks);
+        
         this.init();
     }
     
@@ -43,6 +45,32 @@ class Footer {
             return 'FR';
         }
         return 'EN';
+    }
+    
+    /**
+     * Href for the terms-of-sale page (root EN default from /en/, localized file in /fr/ and /zh/).
+     */
+    getTermsOfSaleHref() {
+        const path = window.location.pathname;
+        if (path.includes('/en/')) {
+            return '../terms-of-sale.html';
+        }
+        return 'terms-of-sale.html';
+    }
+    
+    /**
+     * Ensures the legal footer row always includes the CGV / terms-of-sale link (ZH, FR, EN).
+     */
+    ensureBottomLinksIncludeTerms(bottomLinks) {
+        const links = Array.isArray(bottomLinks) ? bottomLinks.slice() : this.getDefaultBottomLinks();
+        const hasTerms = links.some((l) => (l && l.href && l.href.indexOf('terms-of-sale') !== -1));
+        if (!hasTerms) {
+            links.push({
+                label: this.t('termsOfSale'),
+                href: this.getTermsOfSaleHref()
+            });
+        }
+        return links;
     }
     
     /**
@@ -62,6 +90,7 @@ class Footer {
                 cookies: 'Cookies',
                 privacyPolicy: 'Privacy policy',
                 legalInformations: 'Legal Informations',
+                termsOfSale: 'General Terms of Sale',
                 tel: 'Tel'
             },
             ZH: {
@@ -76,6 +105,7 @@ class Footer {
                 cookies: '政策',
                 privacyPolicy: '隐私政策',
                 legalInformations: '法律信息',
+                termsOfSale: '销售条款与条件',
                 tel: '电话'
             },
             FR: {
@@ -90,6 +120,7 @@ class Footer {
                 cookies: 'Cookies',
                 privacyPolicy: 'Politique de confidentialité',
                 legalInformations: 'Mentions légales',
+                termsOfSale: 'Conditions générales de vente',
                 tel: 'Tél'
             }
         };
@@ -127,7 +158,8 @@ class Footer {
         return [
             { label: this.t('cookies'), href: 'cookies.html' },
             { label: this.t('privacyPolicy'), href: 'privacy.html' },
-            { label: this.t('legalInformations'), href: 'legal.html' }
+            { label: this.t('legalInformations'), href: 'legal.html' },
+            { label: this.t('termsOfSale'), href: 'terms-of-sale.html' }
         ];
     }
     
